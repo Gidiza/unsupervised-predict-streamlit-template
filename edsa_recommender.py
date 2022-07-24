@@ -50,7 +50,7 @@ def main():
 	# DO NOT REMOVE the 'Recommender System' option below, however,
 	# you are welcome to add more options to enrich your app.
 	with st.sidebar:
-		selection = option_menu("Main Menu", ["Home", 'visualisation','Top Rated', 'Development team','Contact Us'], 
+		selection = option_menu("Main Menu", ["Home", 'Visualisation','Top Rated', 'Development team','Contact Us'],
 		icons=['house', 'pie-chart', 'star-fill','people-fill', 'envelope'], menu_icon="cast", default_index=0)
 	
 
@@ -71,9 +71,9 @@ def main():
 
 		# User-based preferences
 		st.write('### Enter Your Three Favorite Movies')
-		movie_1 = st.selectbox('Fisrt Option',title_list[14930:15200])
-		movie_2 = st.selectbox('Second Option',title_list[25055:25255])
-		movie_3 = st.selectbox('Third Option',title_list[21100:21200])
+		movie_1 = st.selectbox('First Option',title_list[100:200])
+		movie_2 = st.selectbox('Second Option',title_list[1000:2000])
+		movie_3 = st.selectbox('Third Option',title_list[2000:3000])
 		fav_movies = [movie_1,movie_2,movie_3]
 
 		# Perform top-10 movie recommendation generation
@@ -108,7 +108,7 @@ def main():
 	# -------------------------------------------------------------------
 
 	# ------------- SAFE FOR ALTERING/EXTENSION -------------------
-	elif selection == "visualisation":
+	elif selection == "Visualisation":
 		st.title("Visualisation of the Raw Data")
 		st.write("Describe your winning approach on this page")
 
