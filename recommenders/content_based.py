@@ -63,11 +63,11 @@ def data_preprocessing(subset_size):
 
 
 data = data_preprocessing(27000)
-    # Instantiating and generating the count matrix
-    count_vec = CountVectorizer()
-    count_matrix = count_vec.fit_transform(data['keyWords'])
-    indices = pd.Series(data['title'])
-    cosine_sim = cosine_similarity(count_matrix, count_matrix)
+# Instantiating and generating the count matrix
+count_vec = CountVectorizer()
+count_matrix = count_vec.fit_transform(data['keyWords'])
+indices = pd.Series(data['title'])
+cosine_sim = cosine_similarity(count_matrix, count_matrix)
     
 
 # !! DO NOT CHANGE THIS FUNCTION SIGNATURE !!
