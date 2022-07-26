@@ -44,6 +44,8 @@ title_list = load_movie_titles('resources/data/movies.csv')
 
 raw = pd.read_csv("resources/data/ratings.csv")
 
+rat = pd.read_csv("resources/data/table.csv")
+
 # App declaration
 def main():
 
@@ -110,7 +112,7 @@ def main():
 	# ------------- SAFE FOR ALTERING/EXTENSION -------------------
 	elif selection == "Visualisation":
 		st.title("Visualisation of the Raw Data")
-		st.write("Describe your winning approach on this page")
+		st.write("Here is a visual overview of the total number of ratings and top 10 users by number of ratings")
 
 		opt = st.radio('Visualise data aspects:',['Total number of ratings', 'Top ten users by number of ratings'])
 
@@ -258,6 +260,9 @@ def main():
 		st.write(
 			"We have been working with small busineses to help them transist to a digital world so as to effectively collect data on their customers. In our Attempt to bridge the digital gap between the low income class and the high income class, we have donated over 15 computer labs to under priveledged schools.")
 
+
+
+	elif selection == 'Contact Us':
 		col1, mid, col2 = st.columns([80, 80, 80])
 		with col1:
 			st.write("")
