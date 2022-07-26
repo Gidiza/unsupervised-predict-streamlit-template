@@ -230,6 +230,44 @@ def main():
 			st.write("Lindokuhle has worked as a back-end itern for multiple companies. On his spare time he enjoys tv shows.")
 		with col1:
 			st.image('me.jpeg', width=380)
+
+
+	elif selection=='About Us':
+		st.markdown("<h2 style=color:#3FBEBF;>About Us</h2>",unsafe_allow_html=True)
+		st.title("")
+
+		col1,mid,col2 = st.columns([80,10,80])
+		with col1:
+			st.image('logo.png')
+		with col2:
+			st.markdown("<h3 style=color:#3FBEBF;>Data Lens Corp</h3>",unsafe_allow_html=True)
+			st.write("")
+			st.write("Data Lens Corp was foundend in 2015 by Fabian Brijlal. The aim of the company is to help companies and organisations make sense of their data, this helps them make informed decisions based on data.")
+		st.title("")
+		st.markdown("<h3 style=color:#3FBEBF;>Our Vision</h3>",unsafe_allow_html=True)
+		st.write("")
+		st.write("We have been working with small busineses to help them transist to a digital world so as to effectively collect data on their customers. In our Attempt to bridge the digital gap between the low income class and the high income class, we have donated over 15 computer labs to under priveledged schools.")
+		
+		col1,mid,col2 = st.columns([80,80,80])
+		with col1:
+			st.write("")
+		with mid:
+			st.markdown("<h3 style=color:#3FBEBF;>Contact Us</h3>",unsafe_allow_html=True)
+		col1,mid,col2 = st.columns([80,10,80])
+		with col1:
+			st.markdown("<h4 style=color:#3FBEBF;>Durban Offices</h4>",unsafe_allow_html=True)	
+
+			st.write(":phone: (+27) 23 456 7890")
+			st.write(":email: durbandatalens@dlc.ac.za")
+			st.write(":round_pushpin: Durban Central, West Street block c, building 200")
+
+		with col2:
+			st.markdown("<h4 style=color:#3FBEBF;>Cape Town Offices</h4>",unsafe_allow_html=True)	
+
+			st.write(":phone: (+27) 23 456 7890")
+			st.write(":email: cptnandatalens@dlc.ac.za")
+			st.write(":round_pushpin: Cape Town City, Kloof Street, building 3 on block F")
+		
 		#if btn:
 		#	if act:
 		#		ls.append("and (rat['genre']==/"Action")")
