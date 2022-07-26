@@ -148,6 +148,98 @@ def main():
 	# You may want to add more sections here for aspects such as an EDA,
 	# or to provide your business pitch.
 
+	elif selection == "Top Rated":
+		st.markdown("<h2 style=color:#3FBEBF;>Top Rated Movies By Genres</h2>", unsafe_allow_html=True)
+		col1, mid, col2 = st.columns([20, 2, 80])
+		with col1:
+			act = st.checkbox("Action")
+			war = st.checkbox("War")
+			rom = st.checkbox("Romantic")
+			com = st.checkbox("Comedy")
+			drm = st.checkbox("Drama")
+			adv = st.checkbox("Adventure")
+			sf = st.checkbox("Sci-Fi")
+			thr = st.checkbox("Thriller")
+			ani = st.checkbox("Animation")
+
+			ls = "True"
+			btn = st.button("Explore")
+
+			if btn:
+				if act:
+					ls = ls + " & rat['genres'].str.contains(\"Action\")"
+
+				if war:
+					ls = ls + " & rat['genres'].str.contains(\"War\")"
+
+				if rom:
+					ls = ls + " & rat['genres'].str.contains(\"Romance\")"
+
+				if com:
+					ls = ls + " & rat['genres'].str.contains(\"Comedy\")"
+
+				if drm:
+					ls = ls + " & rat['genres'].str.contains(\"Drama\")"
+
+				if adv:
+					ls = ls + " & rat['genres'].str.contains(\"Adventure\")"
+
+				if sf:
+					ls = ls + " & rat['genres'].str.contains(\"Sci-Fi\")"
+
+				if thr:
+					ls = ls + " & rat['genres'].str.contains(\"Thriller\")"
+
+				if ani:
+					ls = ls + " & rat['genres'].str.contains(\"Animation\")"
+				with col2:
+
+					exec("st.write(rat[" + ls + "].sort_values(by=['rating'], ascending=False)[['title','genres']])")
+
+
+
+
+
+	elif selection == "Development team":
+		st.markdown("<h2 style=color:#3FBEBF;>Meet Our Team</h2>", unsafe_allow_html=True)
+		st.title("")
+		col1, mid, col2 = st.columns([80, 10, 80])
+		with col2:
+			st.subheader("Fabian Brijlal - Director")
+			st.write(
+				"Fabian has worked as a Project Manager, Product Manager, Systems and Production developer. When he is not coding he enjoys watching sport on television.")
+		with col1:
+			st.image('fabian.png', width=380)
+		col1, mid, col2 = st.columns([80, 10, 80])
+		with col1:
+			st.subheader("Angela Morris - Dep Director")
+			st.write(
+				"Angela has worked as a Product Manger and has worked with many startups. On her spare time she enjoys reading novels.")
+		with col2:
+			st.image('angela.jpg', width=380)
+		col1, mid, col2 = st.columns([80, 10, 80])
+		with col2:
+			st.subheader("Malesela M. Mohlake - Senior Data Analyst")
+			st.write(
+				"Mr Mohlake has worked as a lead data analyst for multiple F.A.N.G. companies. When he's not working he enjoys spending time with his family and friends.")
+		with col1:
+			st.image('mucus.jpg', width=380)
+		col1, mid, col2 = st.columns([80, 10, 80])
+		with col1:
+			st.subheader("Lungelo Ndlovu - Senior Data Analyst")
+			st.write(
+				"Lungelo has worked as researcher for MIT in statistics. Lungelo enjoys turtoring young aspiring data sciensist and data analyst alike.")
+		with col2:
+			st.image('lungelo.jpg', width=380)
+		col1, mid, col2 = st.columns([80, 10, 80])
+		with col2:
+			st.subheader("Lindokuhle Mtshali - Server Engineer")
+			st.write(
+				"Lindokuhle has worked as a back-end itern for multiple companies. On his spare time he enjoys tv shows.")
+		with col1:
+			st.image('me.jpeg', width=380)
+
+
 
 if __name__ == '__main__':
 	main()
