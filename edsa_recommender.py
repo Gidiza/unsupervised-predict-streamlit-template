@@ -211,35 +211,35 @@ def main():
 			st.write(
 				"Fabian has worked as a Project Manager, Product Manager, Systems and Production developer. When he is not coding he enjoys watching sport on television.")
 		with col1:
-			st.image('fabian.png', width=380)
+			st.image('fabian.png', width=200)
 		col1, mid, col2 = st.columns([80, 10, 80])
 		with col1:
 			st.subheader("Angela Morris - Dep Director")
 			st.write(
 				"Angela has worked as a Product Manger and has worked with many startups. On her spare time she enjoys reading novels.")
 		with col2:
-			st.image('angela.jpg', width=380)
+			st.image('angela.jpg', width=200)
 		col1, mid, col2 = st.columns([80, 10, 80])
 		with col2:
 			st.subheader("Malesela M. Mohlake - Senior Data Analyst")
 			st.write(
 				"Mr Mohlake has worked as a lead data analyst for multiple F.A.N.G. companies. When he's not working he enjoys spending time with his family and friends.")
 		with col1:
-			st.image('mucus.jpg', width=380)
+			st.image('mucus.jpg', width=200)
 		col1, mid, col2 = st.columns([80, 10, 80])
 		with col1:
 			st.subheader("Lungelo Ndlovu - Senior Data Analyst")
 			st.write(
 				"Lungelo has worked as researcher for MIT in statistics. Lungelo enjoys turtoring young aspiring data sciensist and data analyst alike.")
 		with col2:
-			st.image('lungelo.jpg', width=380)
+			st.image('lungelo.jpg', width=200)
 		col1, mid, col2 = st.columns([80, 10, 80])
 		with col2:
 			st.subheader("Lindokuhle Mtshali - Server Engineer")
 			st.write(
 				"Lindokuhle has worked as a back-end itern for multiple companies. On his spare time he enjoys tv shows.")
 		with col1:
-			st.image('me.jpeg', width=380)
+			st.image('me.jpeg', width=200)
 
 
 	elif selection == 'About Us':
