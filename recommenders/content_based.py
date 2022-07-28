@@ -60,15 +60,12 @@ def data_preprocessing(subset_size):
     return movies_subset
 
 
-
 data = data_preprocessing(27000)
 # Instantiating and generating the count matrix
 count_vec = CountVectorizer()
 count_matrix = count_vec.fit_transform(data['keyWords'])
 indices = pd.Series(data['title'])
 cosine_sim = cosine_similarity(count_matrix, count_matrix)
-
-
 
 # !! DO NOT CHANGE THIS FUNCTION SIGNATURE !!
 # You are, however, encouraged to change its content.  
@@ -91,12 +88,7 @@ def content_model(movie_list,top_n=10):
     """
     # Initializing the empty list of recommended movies
     recommended_movies = []
-    data = data_preprocessing(27000)
-    # Instantiating and generating the count matrix
-    count_vec = CountVectorizer()
-    count_matrix = count_vec.fit_transform(data['keyWords'])
-    indices = pd.Series(data['title'])
-    cosine_sim = cosine_similarity(count_matrix, count_matrix)
+
     # Getting the index of the movie that matches the title
     idx_1 = indices[indices == movie_list[0]].index[0]
     idx_2 = indices[indices == movie_list[1]].index[0]
