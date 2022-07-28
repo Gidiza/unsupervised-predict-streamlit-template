@@ -62,7 +62,6 @@ def main():
 	#page_selection = st.sidebar.selectbox("Choose Option", page_options)
 	if selection == "Home":
 		# Header contents
-		st.image('logo.png', width=200)
 		st.write('# Movie Recommender Engine')
 		st.write('### EXPLORE Data Science Academy Unsupervised Predict')
 		st.image('resources/imgs/Image_header.png',use_column_width=True)
